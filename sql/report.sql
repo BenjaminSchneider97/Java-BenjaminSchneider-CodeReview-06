@@ -19,6 +19,13 @@ SELECT student.student_name, student.student_surname
 FROM student
 WHERE fk_class_id = "2a";
 
+/*second option*/
+
+SELECT student.student_name, student.student_surname
+FROM student
+INNER JOIN class ON student.fk_class_id = class.class_id
+WHERE class.className = "2a"
+
 /*
 should show:
 	Harry Potter
